@@ -1,0 +1,23 @@
+"use strict";
+let avatar = document.getElementById("avatar");
+let name = document.getElementById("name");
+let description = document.getElementById("description");
+let toggleBtn = document.getElementById("toggle-btn");
+
+toggleBtn.addEventListener("click", function(){
+
+    let isHero = document.body.classList.contains("hero");
+
+    if(isHero) {
+        document.body.classList.replace("hero", "villain");
+        name.textContent = "Diabeł złodziej";
+        description.textContent = "Tryb: 2 złodziej";
+        avatar.src = "https://static.wikia.nocookie.net/tvd/images/c/c7/Diabe%C5%82.png/revision/latest?cb=20150405201820&path-prefix=pl";
+    }
+    else {
+        document.body.classList.replace("villain", "hero");
+        name.textContent = "Śmierć złodziej";
+        description.textContent = "Tryb: złodziej";
+        avatar.src = "https://img.magnific.com/darmowe-zdjecie/elfy-narodzily-sie-z-magii-smierci-magicznej-ilustracji-ilustracji-3d_456031-152.jpg";
+    }
+});
