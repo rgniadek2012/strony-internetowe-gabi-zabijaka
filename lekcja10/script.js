@@ -12,7 +12,7 @@ toggleBtn.addEventListener("click", function(){
         document.body.classList.replace("hero", "villain");
         name.textContent = "Diabeł złodziej";
         description.textContent = "Tryb: 2 złodziej";
-        avatar.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6pxr2vRXxkeVv-l7vLDNCrY4ikhPvVVcBczjYEKhTOg&s=10";
+        avatar.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWh8-PjLbGTkdlQaBVdrroUNM9Fxltv6ZAfoNyqY-jEA&s=10";
     }
     else {
         document.body.classList.replace("villain", "hero");
