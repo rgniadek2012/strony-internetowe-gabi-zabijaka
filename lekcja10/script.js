@@ -12,7 +12,7 @@ toggleBtn.addEventListener("click", function(){
         document.body.classList.replace("hero", "villain");
         name.textContent = "Diabeł złodziej";
         description.textContent = "Tryb: 2 złodziej";
-        avatar.src = "https://static.wikia.nocookie.net/tvd/images/c/c7/Diabe%C5%82.png/revision/latest?cb=20150405201820&path-prefix=pl";
+        avatar.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6pxr2vRXxkeVv-l7vLDNCrY4ikhPvVVcBczjYEKhTOg&s=10";
     }
     else {
         document.body.classList.replace("villain", "hero");
