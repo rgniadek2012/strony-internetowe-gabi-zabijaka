@@ -9,8 +9,8 @@ body {
     display: grid;
     place-items: center;
     padding: 24px;
-    background: linear-gradient(135deg, #020202, #121212);
-    color: #000000;
+    background: linear-gradient(135deg, #fff5f5, #ffe0e0);
+    color: #202020;
     font-family: Arial, sans-serif;
 }
 
@@ -20,16 +20,16 @@ form {
     flex-direction: column;
     gap: 12px;
     padding: 32px;
-    border: 1px solid #red;
+    border: 1px solid #fecaca;
     border-radius: 16px;
-    background: #red;
-    box-shadow: 0 12px 35px red(38, 50, 56, 0.15);
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(185, 28, 28, 0.12);
 }
 
 h1 {
     margin: 0 0 20px;
     text-align: center;
-    color: #000000;
+    color: #b91c1c;
     font-size: 32px;
     letter-spacing: 2px;
 }
@@ -41,11 +41,11 @@ label {
 input,
 textarea {
     width: 100%;
-    border: 2px solid #0c0c0c;
+    border: 2px solid #fecaca;
     border-radius: 8px;
     padding: 12px;
-    background: #070707;
-    color: #fd0404;
+    background: #fffafa;
+    color: #202020;
     font: inherit;
     transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
@@ -57,9 +57,9 @@ textarea {
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #red;
-    background: #red;
-    box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.12);
+    border-color: #ef4444;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
 }
 
 button {
@@ -67,8 +67,8 @@ button {
     border: none;
     border-radius: 8px;
     padding: 13px;
-    background: #070707;
-    color: #030303;
+    background: #ef4444;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -76,7 +76,7 @@ button {
 }
 
 button:hover {
-    background: #ff0808;
+    background: #b91c1c;
 }
 
 button:active {
@@ -86,7 +86,7 @@ button:active {
 #script\.js {
     min-height: 24px;
     text-align: center;
-    color: #0e0e0e;
+    color: #b91c1c;
     font-weight: bold;
 }
 
