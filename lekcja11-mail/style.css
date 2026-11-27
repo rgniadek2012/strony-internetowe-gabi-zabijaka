@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -8,8 +9,8 @@ body {
     display: grid;
     place-items: center;
     padding: 24px;
-    background: linear-gradient(135deg, #e3f2fd, #f6f8ff);
-    color: #263238;
+    background: linear-gradient(135deg, #020202, #121212);
+    color: #000000;
     font-family: Arial, sans-serif;
 }
 
@@ -19,16 +20,16 @@ form {
     flex-direction: column;
     gap: 12px;
     padding: 32px;
-    border: 1px solid #dfe7ef;
+    border: 1px solid #red;
     border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 12px 35px rgba(38, 50, 56, 0.15);
+    background: #red;
+    box-shadow: 0 12px 35px red(38, 50, 56, 0.15);
 }
 
 h1 {
     margin: 0 0 20px;
     text-align: center;
-    color: #1565c0;
+    color: #000000;
     font-size: 32px;
     letter-spacing: 2px;
 }
@@ -40,11 +41,11 @@ label {
 input,
 textarea {
     width: 100%;
-    border: 2px solid #cfd8dc;
+    border: 2px solid #0c0c0c;
     border-radius: 8px;
     padding: 12px;
-    background: #fafafa;
-    color: #263238;
+    background: #070707;
+    color: #fd0404;
     font: inherit;
     transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
@@ -56,9 +57,9 @@ textarea {
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #1565c0;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+    border-color: #red;
+    background: #red;
+    box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.12);
 }
 
 button {
@@ -66,8 +67,8 @@ button {
     border: none;
     border-radius: 8px;
     padding: 13px;
-    background: #1565c0;
-    color: #ffffff;
+    background: #070707;
+    color: #030303;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -75,7 +76,7 @@ button {
 }
 
 button:hover {
-    background: #0d47a1;
+    background: #ff0808;
 }
 
 button:active {
@@ -85,7 +86,7 @@ button:active {
 #script\.js {
     min-height: 24px;
     text-align: center;
-    color: #2e7d32;
+    color: #0e0e0e;
     font-weight: bold;
 }
 
@@ -102,3 +103,4 @@ button:active {
         font-size: 26px;
     }
 }
+
