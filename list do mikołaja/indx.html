@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List do Świętego Mikołaja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main class="letter-page">
+        <section class="letter" aria-label="Edytor listu do Świętego Mikołaja">
+            <div class="snow snow-one"></div>
+            <div class="snow snow-two"></div>
+            <div class="christmas-decorations" aria-hidden="true">
+                <span class="christmas-lights"></span>
+                <span class="decoration decoration-left">🎄</span>
+                <span class="decoration decoration-right">🎁</span>
+                <span class="decoration decoration-top-left">🎅</span>
+                <span class="decoration decoration-top-right">🎀</span>
+                <span class="ornament ornament-one"></span>
+                <span class="ornament ornament-two"></span>
+                <span class="ornament ornament-three"></span>
+                <span class="ornament ornament-four"></span>
+                <span class="ornament ornament-five"></span>
+                <span class="ornament ornament-six"></span>
+                <span class="snowflake snowflake-one">❄</span>
+                <span class="snowflake snowflake-two">❄</span>
+                <span class="snowflake snowflake-three">❅</span>
+                <span class="snowflake snowflake-four">❄</span>
+                <span class="snowflake snowflake-five">❅</span>
+                <span class="snowflake snowflake-six">❄</span>
+                <span class="snowflake snowflake-seven">❅</span>
+                <span class="snowflake snowflake-eight">❄</span>
+                <span class="snowflake snowflake-nine">❅</span>
+                <span class="snowflake snowflake-ten">❄</span>
+                <span class="mini-decoration mini-one">🦌</span>
+                <span class="mini-decoration mini-two">🧦</span>
+                <span class="mini-decoration mini-five">🍪</span>
+                <span class="side-garland side-left" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </span>
+                <span class="side-garland side-right" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </span>
+                <span class="side-star left-star-one">⭐</span>
+                <span class="side-star left-star-two">⭐</span>
+                <span class="side-star left-star-three">🔔</span>
+                <span class="side-star right-star-one">⭐</span>
+                <span class="side-star right-star-two">⭐</span>
+                <span class="side-star right-star-three">🔔</span>
+            </div>
+
+            <header class="letter-header">
+                <div class="north-pole">MAJÓWKA NA BIEGUNIE PÓŁNOCNYM</div>
+                <h1>List do Świętego Mikołaja</h1>
+            </header>
+
+            <div class="postmark" aria-hidden="true">
+                <span>BIEGUN PÓŁNOCNY</span>
+                <b>25 XII</b>
+            </div>
+
+            <div class="letter-body">
+                <p>Drogi Święty Mikołaju, proszę cię o...:</p>
+
+                <label for="wish" class="sr-only">Treść listu</label>
+                <textarea id="wish" maxlength="1200" placeholder="Napisz tutaj swoją wiadomość..."></textarea>
+
+                <div class="signature">
+                    <label for="name">Pozdrawiam serdecznie,</label>
+                    <input id="name" type="text" maxlength="50" placeholder="Twoje imię">
+                </div>
+            </div>
+
+            <footer class="letter-actions">
+                <button id="save-button" type="button">Zapisz list</button>
+                <button id="email-button" type="button">Wyślij e-mailem</button>
+                <button id="print-button" class="primary" type="button">Drukuj list</button>
+            </footer>
+
+            <img class="lego-santa-photo" src="lego-mikolaj.jpg" alt="Figurka LEGO Świętego Mikołaja">
+
+            <form id="email-form" class="email-form" hidden>
+                <label for="email-address">Adres e-mail odbiorcy</label>
+                <div class="email-fields">
+                    <input id="email-address" type="email" placeholder="adres@example.com" required>
+                    <button class="primary" type="submit">Wyślij list jako obraz</button>
+                </div>
+            </form>
+
+            <p id="status" role="status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

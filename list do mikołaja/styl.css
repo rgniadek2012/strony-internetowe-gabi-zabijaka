@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Mountains+of+Christmas:wght@700&display=swap');
+
+:root {
+    --red: #9f1d20;
+    --green: #24543b;
+    --ink: #2f2a24;
+    --paper: #fffdf4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
+        radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.8) 0 2px, transparent 3px),
+        radial-gradient(circle at 72% 80%, rgba(255, 255, 255, 0.7) 0 3px, transparent 4px),
+        linear-gradient(135deg, #dcebe6, #f1eee2);
+    background-size: 160px 160px, 210px 210px, 260px 260px, auto;
+    font-family: "Caveat", cursive;
+}
+
+.letter-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+}
+
+.letter {
+    position: relative;
+    width: min(820px, 100%);
+    min-height: 620px;
+    padding: 42px 68px 28px;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(43, 89, 62, 0.08) 1px, transparent 1px),
+        var(--paper);
+    background-size: 100% 32px;
+    border: 12px solid var(--paper);
+    border-image: linear-gradient(135deg, var(--red) 0 49%, var(--green) 49%) 1;
+    box-shadow: 0 18px 50px rgba(48, 54, 45, 0.22);
+}
+
+.lego-santa-photo {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.42;
+}
+
+.letter-header,
+.letter-body,
+.letter-actions,
+.email-form,
+#status,
+.postmark {
+    position: relative;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.letter::before,
+.letter::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(159, 29, 32, 0.12);
+    border-radius: 50%;
+}
+
+.letter::before {
+    left: -48px;
+    bottom: 70px;
+}
+
+.letter::after {
+    right: -55px;
+    top: 150px;
+}
+
+.christmas-decorations {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    pointer-events: none;
+}
+
+.christmas-lights {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18px;
+    border-top: 3px dotted #ffd84d;
+    border-radius: 50%;
+    filter: drop-shadow(0 3px 5px rgba(255, 216, 77, 0.55));
+}
+
+.decoration {
+    position: absolute;
+    top: 18px;
+    font-size: 58px;
+    line-height: 1;
+    filter: drop-shadow(0 5px 6px rgba(30, 45, 35, 0.25));
+}
+
+.decoration-left {
+    left: 22px;
+}
+
+.decoration-right {
+    right: 22px;
+    top: 16px;
+}
+
+.ornament {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(80, 40, 20, 0.25);
+}
+
+.ornament::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: -10px;
+    width: 5px;
+    height: 8px;
+    background: #d8b65a;
+    border-radius: 2px;
+}
+
+.ornament-one {
+    top: 22px;
+    left: 26px;
+    background: #b91d2b;
+}
+
+.ornament-two {
+    top: 44px;
+    right: 32px;
+    background: #27704a;
+}
+
+.ornament-three {
+    top: 92px;
+    left: 36px;
+    background: #e1b44a;
+}
+
+.ornament-four {
+    top: 18px;
+    left: 48%;
+    background: #f2cf62;
+}
+
+.ornament-five {
+    top: 310px;
+    left: 24px;
+    background: #d7edf3;
+}
+
+.ornament-six {
+    right: 26px;
+    top: 320px;
+    background: #b91d2b;
+}
+
+.decoration-top-left {
+    top: 126px;
+    left: 18px;
+    bottom: auto;
+    font-size: 48px;
+}
+
+.decoration-top-right {
+    top: 118px;
+    right: 18px;
+    bottom: auto;
+    font-size: 48px;
+}
+
+.snowflake {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 34px;
+    text-shadow: 0 2px 5px rgba(36, 84, 59, 0.35);
+}
+
+.snowflake-one {
+    top: 130px;
+    left: 18%;
+}
+
+.snowflake-two {
+    top: 210px;
+    right: 18%;
+}
+
+.snowflake-three {
+    bottom: 190px;
+    left: 34%;
+}
+
+.snowflake-four {
+    bottom: 95px;
+    right: 32%;
+}
+
+.snowflake-five {
+    top: 155px;
+    right: 42%;
+}
+
+.snowflake-six {
+    top: 78px;
+    left: 24%;
+}
+
+.snowflake-seven {
+    top: 115px;
+    right: 12%;
+}
+
+.snowflake-eight {
+    top: 270px;
+    left: 8%;
+}
+
+.snowflake-nine {
+    bottom: 230px;
+    right: 8%;
+}
+
+.snowflake-ten {
+    bottom: 62px;
+    left: 45%;
+}
+
+.mini-decoration {
+    position: absolute;
+    z-index: 3;
+    font-size: 38px;
+    line-height: 1;
+    filter: drop-shadow(0 4px 5px rgba(36, 84, 59, 0.25));
+}
+
+.mini-one {
+    top: 180px;
+    left: 14px;
+}
+
+.mini-two {
+    top: 185px;
+    right: 16px;
+}
+
+.mini-three {
+    top: 100px;
+    left: 34%;
+}
+
+.mini-four {
+    top: 265px;
+    right: 22%;
+}
+
+.mini-five {
+    top: 72px;
+    right: 27%;
+}
+
+.mini-six {
+    top: 72px;
+    left: 35%;
+}
+
+.side-garland {
+    position: absolute;
+    z-index: 3;
+    top: 155px;
+    bottom: 155px;
+    width: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 3px dotted #fff6bc;
+    border-radius: 50%;
+    filter: drop-shadow(0 3px 5px rgba(36, 84, 59, 0.25));
+}
+
+.side-left {
+    left: 8px;
+}
+
+.side-right {
+    right: 8px;
+    transform: scaleX(-1);
+}
+
+.side-garland i {
+    width: 20px;
+    height: 20px;
+    margin-left: -12px;
+    background: #b91d2b;
+    border: 3px solid #fff8dc;
+    border-radius: 50%;
+    box-shadow: 0 3px 7px rgba(80, 40, 20, 0.25);
+}
+
+.side-garland i:nth-child(2),
+.side-garland i:nth-child(4) {
+    background: #27704a;
+}
+
+.side-garland i:nth-child(3) {
+    background: #e1b44a;
+}
+
+.side-star {
+    position: absolute;
+    z-index: 4;
+    font-size: 32px;
+    line-height: 1;
+    filter: drop-shadow(0 3px 4px rgba(36, 84, 59, 0.3));
+}
+
+.left-star-one {
+    left: 38px;
+    top: 190px;
+}
+
+.left-star-two {
+    left: 42px;
+    top: 335px;
+}
+
+.left-star-three {
+    left: 35px;
+    top: 470px;
+}
+
+.right-star-one {
+    right: 38px;
+    top: 190px;
+}
+
+.right-star-two {
+    right: 42px;
+    top: 335px;
+}
+
+.right-star-three {
+    right: 35px;
+    top: 470px;
+}
+
+.letter-header {
+    position: relative;
+    z-index: 1;
+    padding-right: 130px;
+}
+
+.north-pole {
+    color: var(--red);
+    font-family: "Mountains of Christmas", cursive;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 10px 0 24px;
+    color: var(--green);
+    font-family: "Mountains of Christmas", cursive;
+    font-size: clamp(38px, 7vw, 68px);
+    line-height: 1;
+}
+
+.postmark {
+    position: absolute;
+    z-index: 2;
+    top: 38px;
+    right: 42px;
+    width: 110px;
+    height: 110px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: rgba(159, 29, 32, 0.72);
+    border: 3px solid rgba(159, 29, 32, 0.72);
+    border-radius: 50%;
+    transform: rotate(8deg);
+}
+
+.postmark span {
+    max-width: 86px;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.postmark b {
+    margin-top: 5px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.letter-body {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(24px, 3.2vw, 34px);
+    line-height: 1.35;
+}
+
+.letter-body p {
+    margin: 0 0 12px;
+}
+
+textarea,
+input {
+    width: 100%;
+    color: var(--ink);
+    font-family: "Caveat", cursive;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+textarea {
+    min-height: 260px;
+    resize: vertical;
+    padding: 4px 8px;
+    font-size: clamp(24px, 3.2vw, 34px);
+    line-height: 32px;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: #9a9183;
+}
+
+.signature {
+    display: grid;
+    grid-template-columns: auto minmax(180px, 320px);
+    align-items: end;
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.signature label {
+    white-space: nowrap;
+}
+
+.signature input {
+    padding: 6px 10px 2px;
+    border-bottom: 2px solid var(--green);
+    font-size: 32px;
+}
+
+.letter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.email-form {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.email-fields {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.email-fields input {
+    min-width: 0;
+    padding: 8px 10px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    border: 1px solid #8a9b8e;
+    border-radius: 6px;
+}
+
+button {
+    position: relative;
+    z-index: 6;
+    pointer-events: auto;
+    min-height: 44px;
+    padding: 8px 18px;
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid var(--green);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+button.primary {
+    color: white;
+    background: var(--green);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(36, 84, 59, 0.14);
+}
+
+#status {
+    min-height: 20px;
+    margin: 8px 0 0;
+    color: var(--green);
+    text-align: right;
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 620px) {
+    .letter-page {
+        padding: 12px;
+    }
+
+    .letter {
+        min-height: calc(100vh - 24px);
+        padding: 28px 24px 20px;
+        border-width: 8px;
+    }
+
+    .letter-header {
+        padding-right: 82px;
+    }
+
+    .north-pole {
+        max-width: 180px;
+    }
+
+    h1 {
+        margin-top: 8px;
+    }
+
+    .postmark {
+        top: 28px;
+        right: 18px;
+        width: 78px;
+        height: 78px;
+    }
+
+    .postmark span {
+        font-size: 7px;
+    }
+
+    .postmark b {
+        font-size: 13px;
+    }
+
+    textarea {
+        min-height: 280px;
+    }
+
+    .signature {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .letter-actions {
+        flex-wrap: wrap;
+    }
+
+    .lego-santa-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.42;
+    }
+
+    .decoration {
+        font-size: 42px;
+    }
+
+    .decoration-left {
+        left: 10px;
+    }
+
+    .decoration-right {
+        right: 10px;
+    }
+
+    .decoration-top-left,
+    .decoration-top-right {
+        display: none;
+    }
+
+    .snowflake {
+        font-size: 24px;
+    }
+
+    .ornament-five,
+    .ornament-six {
+        display: none;
+    }
+
+    .mini-decoration {
+        font-size: 29px;
+    }
+
+    .side-garland {
+        top: 145px;
+        bottom: 145px;
+        width: 24px;
+    }
+
+    .side-garland i {
+        width: 15px;
+        height: 15px;
+        margin-left: -9px;
+        border-width: 2px;
+    }
+
+    .side-star {
+        font-size: 22px;
+    }
+
+    .left-star-one,
+    .left-star-two,
+    .left-star-three,
+    .right-star-one,
+    .right-star-two,
+    .right-star-three {
+        opacity: 0.9;
+    }
+
+    .mini-one,
+    .mini-two,
+    .mini-four,
+    .mini-five,
+    .mini-six,
+    .snowflake-six,
+    .snowflake-seven,
+    .snowflake-eight,
+    .snowflake-nine,
+    .snowflake-ten {
+        display: none;
+    }
+
+    .email-fields {
+        flex-wrap: wrap;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .letter-page {
+        display: block;
+        padding: 0;
+    }
+
+    .letter {
+        width: 100%;
+        min-height: 270mm;
+        box-shadow: none;
+    }
+
+    .letter-actions,
+    .email-form,
+    #status {
+        display: none;
+    }
+
+    textarea,
+    input {
+        border: none;
+    }
+}
